@@ -1,16 +1,15 @@
-{% extends 'router/base.html' %}
-{% load crispy_forms_tags %}
-{% block content %}
-    <div class="content-section">
-        <form action="" method="post">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <h2 class="border-bottom mb-4">Create a Short URL</h2>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button type="submit" class="btn btn-outline-info">Submit</button>
-            </div>
-        </form>
+{% extends 'router/base.html' %} {% block content %}
+<div class="content-section">
+  <form action="" method="POST" id="url_form">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <h2 class="border-bottom mb-4">Create a Short URL</h2>
+      {{ form }}
+    </fieldset>
+    <div class="form-group">
+      <button type="submit" class="btn btn-outline-info"
+       id="submit_btn">Submit</button>
     </div>
+  </form>
+</div>
 {% endblock content %}

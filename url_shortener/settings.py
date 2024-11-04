@@ -16,16 +16,16 @@ import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'faweoif2f90j2ionwjdcsnxwef12r0129cjhen1x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG_VALUE') == "True"
+DEBUG = "True"
 
 ALLOWED_HOSTS = ['localhost', 'myurlshortener1.herokuapp.com']
 
@@ -34,13 +34,13 @@ ALLOWED_HOSTS = ['localhost', 'myurlshortener1.herokuapp.com']
 
 INSTALLED_APPS = [
     'router.apps.RouterConfig',
-    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -107,9 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
+SECURE_SSL_REDIRECT = False
 
 LANGUAGE_CODE = 'en-us'
 
